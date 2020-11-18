@@ -43,7 +43,7 @@ variable log_role {
 
 variable logging_plan {
     description = "Optional when creating resource. Plan for LogDNA instance"
-    default     = "7-day"
+    default     = "lite"
 }
 
 variable tags {
