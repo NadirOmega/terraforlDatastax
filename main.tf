@@ -49,19 +49,19 @@ provider kubernetes {
 # Activity Tracker
 ##############################################################################
 
-resource ibm_resource_instance activity_tracker {
+#resource ibm_resource_instance activity_tracker {
 
-  name              = "testLogDnaDemo"
-  service           = "logdnaat"
-  plan              = "lite"
-  location          = "eu-de"
-  resource_group_id = data.ibm_resource_group.group.id
+#  name              = "testLogDnaDemo"
+#  service           = "logdnaat"
+ ## plan              = "lite"
+ # location          = "eu-de"
+#  resource_group_id = data.ibm_resource_group.group.id
 
-  parameters = {
-    service-endpoints = "public"
-  }
+#  parameters = {
+#    service-endpoints = "public"
+##  }
 
-}
+#}
 
 ##############################################################################
 
