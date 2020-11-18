@@ -3,10 +3,10 @@
 ##############################################################################
 
 module lodgna {
-  source = "../resource_data"
+  source = "../certif_manager"
   use_data          = var.use_data
   name              = var.name
-  service           = "logdna"
+  service           = "logdnaat"
   resource_group_id = var.resource_group_id
   end_points        = var.use_data ? null : var.end_points
   plan              = var.use_data ?  null : var.logging_plan
