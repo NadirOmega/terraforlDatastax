@@ -3,7 +3,7 @@
 ##############################################################################
 
 module lodgna {
-  source = "../certif_manager"
+  source = "../default_instance"
   use_data          = var.use_data
   name              = var.name
   service           = "logdna"
