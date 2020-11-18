@@ -1,6 +1,7 @@
 provider "ibm" {
   ibmcloud_api_key = "${var.ibm_api_key}"
 }
+
 data ibm_resource_group group {
   name = "ITGP_DATA"
 }
@@ -14,7 +15,8 @@ resource "ibm_container_cluster" "cluster1_demo" {
   hardware        = "shared"
   default_pool_size = 1
   worker_num=1
-  resource_group_id = data.ibm_resource_group.group.id
+  resource_group_id = "${data.ibm_resource_group.group.id}"
+  
 }
 
 
