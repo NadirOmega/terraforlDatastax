@@ -6,7 +6,7 @@ module lodgna {
   source = "../certif_manager"
   use_data          = var.use_data
   name              = var.name
-  service           = "logdnaat"
+  service           = "logdna"
   resource_group_id = var.resource_group_id
   end_points        = var.use_data ? null : var.end_points
   plan              = var.use_data ?  null : var.logging_plan
