@@ -30,14 +30,14 @@ resource "ibm_resource_instance" "logdna" {
 resource "ibm_resource_key" "logdna_secret" {
   name                 = "SecretDemo_logdna_key"
   role                 = "Manager"
-  resource_instance_id = ibm_resource_instance.logdna.id
+  resource_instance_id = "${ibm_resource_instance.logdna.id}"
 }
 
 ## configuration du logDna
 resource "kubernetes_secret" "logdna_agent_key" {
   metadata {
     name      = "logdna-agent-key"
-    namespace = var.log_mon_ns
+    namespace = "${var.log_mon_ns}"
   }
 
   data = {
