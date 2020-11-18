@@ -23,7 +23,7 @@ resource "ibm_container_cluster" "cluster1_demo" {
 ##############################################################################
 
 data ibm_container_cluster_config cluster {
-  cluster_name_id   = "cluster1_demo"
+  cluster_name_id   = ibm_container_cluster.cluster1_demo.name
   resource_group_id = data.ibm_resource_group.group.id
   admin             = true
 }
