@@ -18,6 +18,7 @@ resource "ibm_container_cluster" "cluster1_demo" {
   resource_group_id = "${data.ibm_resource_group.group.id}"
   public_vlan_id  = "2347339"
   private_vlan_id = "2347341"
+  private_service_endpoint = true
 }
 ##############################################################################
 # Cluster Data
