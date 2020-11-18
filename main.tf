@@ -144,3 +144,16 @@ resource kubernetes_secret copy_image_pull_secret {
 }
 
 ##############################################################################
+  module monitor {
+    source             = "./modules/sys_dig"
+    resource_group_id  = data.ibm_resource_group.group.id
+    use_data           = var.bring_your_own_monitor
+    ibm_region         = var.ibm_region
+    name               = var.monitor_name
+    cluster_name       = var.cluster_name
+    sysdig_image       = var.monitor_agent_image
+    sysdig_endpoint    = var.monitor_endpoint
+    monitor_plan       = var.monitor_plan
+    tags               = var.tags
+    end_points         = var.service_end_points
+}
