@@ -3,7 +3,7 @@
 
 
 module sysdig {
-  source            = "../resource_data"
+  source            = "../default_instance"
   use_data          = var.use_data
   name              = var.name
   service           = "sysdig-monitor"
