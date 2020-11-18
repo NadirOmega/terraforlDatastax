@@ -71,15 +71,15 @@ resource ibm_resource_instance activity_tracker {
 ##############################################################################
 
 module logging {
-    source             = "./log_dna"
+    source             = "./modules/log_dna"
     resource_group_id  = data.ibm_resource_group.group.id
     use_data           = var.bring_your_own_logging
     ibm_region         = var.ibm_region
     name               = var.logging_instance_name
     logdna_agent_image = var.logging_agent_image
     logdna_endpoint    = var.logging_endpoint
-    logging_plan       = var.logging_plan
-    tags               = var.tags
-    end_points         = var.service_end_points
+    logging_plan       = "lite"
+    #tags               = var.tags
+    end_points         = "public"
 }
 
