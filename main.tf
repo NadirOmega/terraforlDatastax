@@ -16,7 +16,8 @@ resource "ibm_container_cluster" "cluster1_demo" {
   default_pool_size = 1
   worker_num=1
   resource_group_id = "${data.ibm_resource_group.group.id}"
-  
+  public_service_endpoint  = "true"
+  private_service_endpoint = "true"
 }
 ##############################################################################
 # Cluster Data
